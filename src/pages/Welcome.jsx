@@ -6,10 +6,10 @@
 //   const navigate = useNavigate();
 
 //   return (
-//     <div style={{ display: 'flex', justifyContent: 'center' }}>
+//     <div className='mobile-container'>
 //       <div className="container">
-//         <h1 className="heading">Welcome to Popex</h1>
-//         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br />
+//         <h1>Welcome to Popex</h1>
+//        <p>Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit.</p>
 //         <div className="button-container">
 //           <button className="primary-button">Create Account</button>
 //           <button className="secondary-button" onClick={() => navigate('/login')}>Already Registered?</button>
@@ -33,7 +33,7 @@ const WelcomePage = () => {
     <div className="mobile-container">
       <div className="content">
         <h2>Welcome to PopX</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit.</p>
         <button className="primary" onClick={() => navigate("/create-account")}>
           Create Account
         </button>

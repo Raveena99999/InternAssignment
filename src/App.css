@@ -1,3 +1,8 @@
+/* .mobile-container{
+
+  display: flex;
+  justify-content: center;
+}
 
 .container {
   height: 80vh;
@@ -11,14 +16,14 @@
   margin-left: 38vw;
   
 }
-p{
-  color: grey;
-}
-.heading {
- font-size: 2rem;
-  margin-bottom: 30px;
-  color: black;
-  font-weight: 600;
+.container p{
+color: #888;
+    text-align: left;}
+.container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0px;
+  text-align: left;
 }
 
 .button-container {
@@ -45,4 +50,4 @@ p{
   background-color: rgb(237, 234, 255);
   color: #4a90e2;
   cursor: pointer;
-}
+} */
