@@ -20,7 +20,6 @@ This project is a simple frontend application built using **React.js** with **Vi
 ## 📁 Project Structure
 
 src/
-│
 ├── assets/ # Static images (e.g. profile avatar)
 ├── components/ # Reusable components (if any)
 ├── pages/ # Welcome, Signup, Login, Profile pages
@@ -28,14 +27,11 @@ src/
 │ ├── Signup.jsx
 │ ├── Login.jsx
 │ └── Profile.jsx
-│
 ├── style/ # Custom CSS files
-│ └── profile.css
-│ └── welcome.css
-│ └── signup.css
+│ ├── profile.css
+│ ├── welcome.css
+│ ├── signup.css
 │ └── login.css
-
-│
 ├── App.jsx # Application routes
 └── main.jsx # Entry point
 
