@@ -37,6 +37,7 @@ const Login = () => {
               required
               value={formData.email}
               onChange={handleChange}
+              placeholder="Enter Email Address"
             />
           </fieldset>
         </div>
@@ -50,6 +51,7 @@ const Login = () => {
               required
               value={formData.password}
               onChange={handleChange}
+              placeholder="Enter Password"
             />
           </fieldset>
         </div>

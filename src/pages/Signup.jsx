@@ -42,6 +42,7 @@ const Signup = () => {
               required
               value={formData.fullName}
               onChange={handleChange}
+              placeholder="Enter Full Name"
             />
           </fieldset>
         </div>
@@ -57,6 +58,7 @@ const Signup = () => {
               required
               value={formData.phoneNumber}
               onChange={handleChange}
+              placeholder="Enter Phone Number"
             />
           </fieldset>
         </div>
@@ -72,6 +74,7 @@ const Signup = () => {
               required
               value={formData.email}
               onChange={handleChange}
+              placeholder="Enter Email Address"
             />
           </fieldset>
         </div>
@@ -87,6 +90,7 @@ const Signup = () => {
               required
               value={formData.password}
               onChange={handleChange}
+              placeholder="Enter Password"
             />
           </fieldset>
         </div>
@@ -97,9 +101,9 @@ const Signup = () => {
             <input
               type="text"
               name="company"
-              required
               value={formData.company}
               onChange={handleChange}
+              placeholder="Enter Company name"
             />
           </fieldset>
         </div>
