@@ -1,0 +1,69 @@
+   .profile-container{
+    /* display: flex; */
+
+  height: 100vh;
+  border: 1px solid gainsboro;
+    background-color: #f7f8f9 !important;
+
+   }
+   .profile-div{
+  padding: 1.5rem;
+  width: 380px;
+  /* background-color: #f7f8f9 !important; */
+}
+.profile-div h1{
+    color: #1D2226;
+    font-size: 24px;
+    background-color: #f7f8f9;
+}
+.secondDiv{
+    display: flex;
+    margin-top: 20px;
+}
+.secondDiv p{
+    margin-left: 10px;
+
+}
+.para{
+    margin-top: 20px;
+    color: #1D2226;
+    font-weight: 500;
+    font-size: 16px;
+}
+.dashed-border{
+    border: 1px dashed gray;
+    margin-bottom: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.profile-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.camera-icon {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+}

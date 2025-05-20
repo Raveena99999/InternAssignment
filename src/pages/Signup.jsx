@@ -106,8 +106,10 @@ const Signup = () => {
             />
           </fieldset>
         </div>
+<div style={{display:"flex"}}>
+        <p className="agencyPara">Are you an Agency?</p><span style={{marginLeft:"5px"}} className="required">*</span>
 
-        <p className="agencyPara">Are you an Agency?</p>
+</div>
         <div className="radio-group">
           <label>
             <input
