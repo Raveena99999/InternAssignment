@@ -1,0 +1,50 @@
+.mobile-container {
+  max-width: 320px;
+  margin: auto !important;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f9f9fb;
+    border: 2px solid red;
+
+}
+
+
+.content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  border: 2px solid red;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+button.primary {
+  background-color: #6c47ff;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+button.secondary {
+  background-color: #eae3ff;
+  color: #6c47ff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  width: 100%;
+}

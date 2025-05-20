@@ -1,0 +1,48 @@
+
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 248, 250);
+  padding: 40px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-left: 38vw;
+  
+}
+p{
+  color: grey;
+}
+.heading {
+ font-size: 2rem;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 600;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.primary-button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background-color:#7a3ce8;
+  color: white;
+  cursor: pointer;
+}
+
+.secondary-button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #4a90e2;
+  background-color: rgb(237, 234, 255);
+  color: #4a90e2;
+  cursor: pointer;
+}
