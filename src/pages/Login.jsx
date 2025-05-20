@@ -6,33 +6,14 @@ const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  const [error, setError] = useState("");
-  // const [loggedIn, setLoggedIn] = useState(false);
-
-  // const correctEmail = 'test@example.com';
-  // const correctPassword = 'password123';
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     setError("");
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (
-  //     formData.email === correctEmail &&
-  //     formData.password === correctPassword
-  //   ) {
-  //     setLoggedIn(true);
-  //   } else {
-  //     setError('Invalid email or password.');
-  //   }
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate account creation
     console.log("Account Created", formData);
     navigate("/profile");
   };
@@ -47,7 +28,6 @@ const Login = () => {
           Lorem ipsum dolor sit amet,
           <br /> consectetur adipiscing elit.
         </p>
-        {/* Email Field */}
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>Email Address</legend>
@@ -61,7 +41,6 @@ const Login = () => {
           </fieldset>
         </div>
 
-        {/* Password Field */}
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>Password</legend>
@@ -75,13 +54,9 @@ const Login = () => {
           </fieldset>
         </div>
 
-        {/* {error && <p className="error">{error}</p>} */}
-
         <button className="loginBtn" type="submit">
           Login
         </button>
-
-        {/* {loggedIn && <p className="success">Login successful!</p>} */}
       </form>
     </div>
   );

@@ -20,7 +20,6 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate account creation
     console.log("Account Created", formData);
     navigate("/profile");
   };
@@ -62,7 +61,6 @@ const Signup = () => {
           </fieldset>
         </div>
 
-        {/* Email Field */}
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>
@@ -78,7 +76,6 @@ const Signup = () => {
           </fieldset>
         </div>
 
-        {/* Password Field */}
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>
@@ -106,10 +103,12 @@ const Signup = () => {
             />
           </fieldset>
         </div>
-<div style={{display:"flex"}}>
-        <p className="agencyPara">Are you an Agency?</p><span style={{marginLeft:"5px"}} className="required">*</span>
-
-</div>
+        <div style={{ display: "flex" }}>
+          <p className="agencyPara">Are you an Agency?</p>
+          <span style={{ marginLeft: "5px" }} className="required">
+            *
+          </span>
+        </div>
         <div className="radio-group">
           <label>
             <input
