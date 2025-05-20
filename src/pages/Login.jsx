@@ -1,83 +1,157 @@
+
+
+
+// import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import "../style/login.css";
+
+// const Login = () => {
+//   const navigate = useNavigate();
+//   const [formData, setFormData] = useState({
+   
+//     email: "",
+//     password: "",
+  
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setFormData((prev) => ({ ...prev, [name]: value }));
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // Simulate account creation
+//     console.log("Account Created", formData);
+//     navigate("/profile");
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <form className="login-form" onSubmit={handleSubmit}>
+//         <h2>
+//           Signin your <br /> <h2>PopX account</h2>
+//         </h2>
+
+//         <p>
+//           Lorem ipsum dolor sit amet,
+//           <br /> consectetur adipiscing elit.
+//         </p>
+
+//         <label>Email address*</label>
+//         <input
+//           type="email"
+//           name="email"
+//           required
+//           value={formData.email}
+//           onChange={handleChange}
+//           placeholder="Enter email address"
+//         />
+
+//         <label>Password*</label>
+//         <input
+//           type="password"
+//           name="password"
+//           required
+//           value={formData.password}
+//           onChange={handleChange}
+//           placeholder="Enter password"
+//         />
+
+  
+
+
+//         <button type="submit">Login</button>
+//       </form>
+//     </div>
+//   );
+// };
+
+// export default Login;
+
+
+
+
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../style/login.css';
 
-export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+const Login = () => {
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [error, setError] = useState('');
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  const handleSignIn = (e) => {
+  const correctEmail = 'test@example.com';
+  const correctPassword = 'password123';
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setError('');
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your sign-in logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-
-    // Example navigation after successful sign-in
-    // navigate('/dashboard'); // Or wherever
+    if (
+      formData.email === correctEmail &&
+      formData.password === correctPassword
+    ) {
+      setLoggedIn(true);
+    } else {
+      setError('Invalid email or password.');
+    }
   };
 
   return (
-    // <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <div className="container">
-        <h1 className="heading">Sign in to your Popex account</h1>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br />
-        <div className="button-container">
-            <form onSubmit={handleSignIn} className="form-container">
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleSubmit}>
+ <h2>
+         Signin your <br /> <h2>PopX account</h2>
+        </h2>
 
-  <div className="input-group">
-    <input
-      type="email"
-      id="email"
-      placeholder=" "
-      value={email}
-      required
-      onChange={(e) => setEmail(e.target.value)}
-      className="input-field"
-    />
-    <label htmlFor="email">Email Address</label>
-  </div>
-
-  <div className="input-group">
-    <input
-      type="password"
-      id="password"
-      placeholder=" "
-      value={password}
-      required
-      onChange={(e) => setPassword(e.target.value)}
-      className="input-field"
-    />
-    <label htmlFor="password">Password</label>
-  </div>
-
-  <button type="submit" className="primary-button">Login</button>
-</form>
-
-          {/* <form onSubmit={handleSignIn} className="form-container">
-            <span>Email Address</span><br/>
+         <p>
+          Lorem ipsum dolor sit amet,
+         <br /> consectetur adipiscing elit.
+         </p>
+        {/* Email Field */}
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Email Address <span className="required">*</span>
+            </legend>
             <input
               type="email"
-              placeholder="Email"
-              value={email}
+              name="email"
               required
-              onChange={(e) => setEmail(e.target.value)}
-              className="input-field"
-            /><br/><br/>
-          <span>Password</span><br/>
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
+
+        {/* Password Field */}
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Password <span className="required">*</span>
+            </legend>
             <input
               type="password"
-              placeholder="Password"
-              value={password}
+              name="password"
               required
-              onChange={(e) => setPassword(e.target.value)}
-              className="input-field"
-            /> <br/><br/>
-            <button type="submit" className="primary-button">Login</button>
-          </form><br/> */}
-         
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </fieldset>
         </div>
-      </div>
-    // </div>
+
+        {error && <p className="error">{error}</p>}
+
+        <button className='loginBtn' type="submit">Login</button>
+
+        {loggedIn && <p className="success">Login successful!</p>}
+      </form>
+    </div>
   );
-}
+};
+
+export default Login;

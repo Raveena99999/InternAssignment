@@ -31,10 +31,10 @@ const Signup = () => {
         <h2>Create your <br /> <h2>PopX account</h2></h2>
 
         <label>Full Name*</label>
-        <input name="fullName" required value={formData.fullName} onChange={handleChange} />
+        <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} />
 
         <label>Phone number*</label>
-        <input name="phoneNumber" required value={formData.phoneNumber} onChange={handleChange} />
+        <input type="tel" name="phoneNumber" required value={formData.phoneNumber} onChange={handleChange} />
 
         <label>Email address*</label>
         <input type="email" name="email" required value={formData.email} onChange={handleChange} />
@@ -43,7 +43,7 @@ const Signup = () => {
         <input type="password" name="password" required value={formData.password} onChange={handleChange} />
 
         <label>Company name</label>
-        <input name="company" value={formData.company} onChange={handleChange} />
+        <input type="text" name="company" value={formData.company} onChange={handleChange} />
 
         <p>Are you an Agency?*</p>
         <div className="radio-group">
