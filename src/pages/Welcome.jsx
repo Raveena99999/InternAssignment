@@ -34,7 +34,7 @@ const WelcomePage = () => {
       <div className="content">
         <h2>Welcome to PopX</h2>
         <p>Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit.</p>
-        <button className="primary" onClick={() => navigate("/create-account")}>
+        <button className="primary" onClick={() => navigate("/signup")}>
           Create Account
         </button>
         <button className="secondary" onClick={() => navigate("/login")}>
