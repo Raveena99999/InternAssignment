@@ -105,7 +105,7 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
  <h2>
-         Signin your <br /> <h2>PopX account</h2>
+         Signin to your <br /> <h2>PopX account</h2>
         </h2>
 
          <p>
@@ -116,7 +116,7 @@ const Login = () => {
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>
-              Email Address <span className="required">*</span>
+              Email Address 
             </legend>
             <input
               type="email"
@@ -132,7 +132,7 @@ const Login = () => {
         <div className="fieldset-wrapper">
           <fieldset>
             <legend>
-              Password <span className="required">*</span>
+              Password 
             </legend>
             <input
               type="password"

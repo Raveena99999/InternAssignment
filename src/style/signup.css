@@ -2,16 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 120vh; */
   background: white;
 }
 
 .signup-form {
-  width: 320px;
+  width: 380px;
   padding: 1.5rem;
   background-color: #f7f8f9;
   border: 1px solid gainsboro;
-  border-radius: 8px;
+    /* height: 100vh; */
+
 }
 
 .signup-form h2 {
@@ -19,26 +20,19 @@
   font-weight: bold;
   margin-bottom: 1.2rem;
     color: #1D2226;
+    padding-top: 5rem;
 
 }
 
-.signup-form label {
+/* .signup-form label {
   display: block;
   font-size: 0.9rem;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
   color: #6c25ff;
-}
-
-.signup-form input[type="text"],
-.signup-form input[type="email"],
-.signup-form input[type="password"],
-.signup-form input[type="tel"] {
-  width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: white;
+} */
+.agencyPara{
+  color: #1D2226;
 }
 
 .radio-group {
@@ -53,10 +47,13 @@
   gap: 0.4rem;
   font-size: 0.9rem;
   width: 20%;
+    color: #1D2226;
+    margin: 5px;
+
 }
 
 .signup-form button {
-  margin-top: 1rem;
+  margin-top: 7rem;
   background-color: #6c25ff;
   color: white;
   border: none;
@@ -68,4 +65,77 @@
 
 .required {
   color: red;
+}
+
+
+
+
+.fieldset-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: relative;
+
+}
+.fieldset-wrapper fieldset:focus-within {
+  border-color: #6C25FF;
+}
+
+legend {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  color: #6C25FF;
+      margin-left: 0.5rem;
+
+
+       background: #f7f8f9; /* match form bg to avoid overlap */
+  /* position: absolute;
+  top: -0.6rem; */
+}
+
+
+
+.fieldset-wrapper input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: transparent;
+  padding: 0.2rem 0;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+.radio-group input[type="radio"] {
+  appearance: none; /* hide default */
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #919191;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: #6C25FF; /* border when selected */
+}
+
+.radio-group input[type="radio"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #6C25FF;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
 }

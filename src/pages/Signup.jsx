@@ -10,7 +10,7 @@ const Signup = () => {
     email: "",
     password: "",
     company: "",
-    isAgency: "Yes"
+    isAgency: "Yes",
   });
 
   const handleChange = (e) => {
@@ -28,31 +28,105 @@ const Signup = () => {
   return (
     <div className="signup-container">
       <form className="signup-form" onSubmit={handleSubmit}>
-        <h2>Create your <br /> <h2>PopX account</h2></h2>
+        <h2>
+          Create your <br /> PopX account
+        </h2>
 
-        <label>Full Name*</label>
-        <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} />
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Full Name <span className="required">*</span>
+            </legend>
+            <input
+              type="text"
+              name="fullName"
+              required
+              value={formData.fullName}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
 
-        <label>Phone number*</label>
-        <input type="tel" name="phoneNumber" required value={formData.phoneNumber} onChange={handleChange} />
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Phone number <span className="required">*</span>
+            </legend>
+            <input
+              type="tel"
+              name="phoneNumber"
+              required
+              value={formData.phoneNumber}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
 
-        <label>Email address*</label>
-        <input type="email" name="email" required value={formData.email} onChange={handleChange} />
+        {/* Email Field */}
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Email Address <span className="required">*</span>
+            </legend>
+            <input
+              type="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
 
-        <label>Password*</label>
-        <input type="password" name="password" required value={formData.password} onChange={handleChange} />
+        {/* Password Field */}
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>
+              Password <span className="required">*</span>
+            </legend>
+            <input
+              type="password"
+              name="password"
+              required
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
 
-        <label>Company name</label>
-        <input type="text" name="company" value={formData.company} onChange={handleChange} />
+        <div className="fieldset-wrapper">
+          <fieldset>
+            <legend>Company name</legend>
+            <input
+              type="text"
+              name="company"
+              required
+              value={formData.company}
+              onChange={handleChange}
+            />
+          </fieldset>
+        </div>
 
-        <p>Are you an Agency?*</p>
+        <p className="agencyPara">Are you an Agency?</p>
         <div className="radio-group">
           <label>
-            <input type="radio" value="Yes" name="isAgency" checked={formData.isAgency === "Yes"} onChange={handleChange} />
+            <input
+              type="radio"
+              value="Yes"
+              name="isAgency"
+              checked={formData.isAgency === "Yes"}
+              onChange={handleChange}
+            />
             Yes
           </label>
           <label>
-            <input type="radio" value="No" name="isAgency" checked={formData.isAgency === "No"} onChange={handleChange} />
+            <input
+              type="radio"
+              value="No"
+              name="isAgency"
+              checked={formData.isAgency === "No"}
+              onChange={handleChange}
+            />
             No
           </label>
         </div>

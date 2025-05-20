@@ -15,7 +15,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1.2rem;
-  color: #1d2226;
+  color: #1D2226;
 }
 .login-form p {
   color: #888;
@@ -30,17 +30,25 @@ fieldset {
   border: 1px solid #ccc;
   border-radius: 8px;
   position: relative;
+
+}
+.fieldset-wrapper fieldset:focus-within {
+  border-color: #6C25FF;
 }
 
 legend {
   padding: 0 0.5rem;
   font-size: 0.9rem;
-  color: blue;
+  color: #6C25FF;
+      margin-left: 0.5rem;
+
+
+       background: #f7f8f9; /* match form bg to avoid overlap */
+  /* position: absolute;
+  top: -0.6rem; */
 }
 
-.required {
-  color: red;
-}
+
 
 .fieldset-wrapper input {
   width: 100%;
@@ -49,7 +57,9 @@ legend {
   font-size: 1rem;
   background-color: transparent;
   padding: 0.2rem 0;
-  margin-top: 0.2rem;
+  /* margin-top: 0.2rem; */
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .loginBtn {
@@ -80,3 +90,11 @@ legend {
   text-align: center;
   margin-top: 1rem;
 }
+
+
+
+
+
+
+
+
